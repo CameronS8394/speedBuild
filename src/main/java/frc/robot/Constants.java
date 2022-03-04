@@ -8,7 +8,6 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 
-
 package frc.robot;
 
 /**
@@ -24,11 +23,10 @@ public class Constants {
         public static final int kLeftMotor1Port = 0;
         public static final int kLeftMotor2Port = 1;
         public static final int kRightMotor1Port = 2;
-        public static final int kRightMotor2Port = 3; 
-        
+        public static final int kRightMotor2Port = 3;
+
         public static final double kAutonomousLeftDriveSpeed = .25;
         public static final double kAutonomousRightDriveSpeed = .25;
         public static final double kAutonomousDriveSeconds = 5;
     }
 }
-
