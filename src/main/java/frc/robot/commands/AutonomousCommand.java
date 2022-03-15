@@ -62,14 +62,17 @@ public class AutonomousCommand extends CommandBase {
     @Override
     public void execute() {
         if (timer.get() < Constants.DriveConstants.kAutonomousDriveSeconds) {
-            m_driveTrain.drive(Constants.DriveConstants.kAutonomousLeftDriveSpeed,
+            m_driveTrain.drive(Constants.DriveConstants.kAutonomousLeftDriveSpeed * -1,
                     Constants.DriveConstants.kAutonomousRightDriveSpeed);
+        } else {            
+            m_driveTrain.drive(0.0, 0.0);
         }
     }
 
     // Called once the command ends or is interrupted.
     @Override
     public void end(boolean interrupted) {
+        m_driveTrain.drive(0.0, 0.0);
     }
 
     // Returns true when the command should end.
