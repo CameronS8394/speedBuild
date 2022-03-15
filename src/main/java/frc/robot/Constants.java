@@ -25,9 +25,9 @@ public class Constants {
         public static final int kRightMotor1Port = 0;
         public static final int kRightMotor2Port = 1;
 
-        public static final double kAutonomousLeftDriveSpeed = .65;
-        public static final double kAutonomousRightDriveSpeed = .6;
-        public static final double kAutonomousDriveSeconds = 5;
+        public static final double kAutonomousLeftDriveSpeed = -.65;
+        public static final double kAutonomousRightDriveSpeed = -.6;
+        public static final double kAutonomousDriveSeconds = 3;
 
         public static final double kLeftSpeedFactor = .65;
         public static final double kRightSpeedFactor = .6;
