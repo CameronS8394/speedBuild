@@ -55,18 +55,20 @@ public class TankDrive extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        if (joystick.getRawButton(4)){
-            m_driveTrain.drive(Constants.DriveConstants.kLeftSpeedFactorTurbo * -1 * joystick.getRawAxis(1), 
-        Constants.DriveConstants.kRightSpeedFactorTurbo * joystick.getRawAxis(5));
+        double leftSpeedFactor = Constants.DriveConstants.kLeftSpeedFactor;
+        double rightSpeedFactor = Constants.DriveConstants.kRightSpeedFactor;
+
+        if (joystick.getLeftBumperPressed()){
+            leftSpeedFactor = Constants.DriveConstants.kLeftSpeedFactorTurbo;
+            rightSpeedFactor = Constants.DriveConstants.kRightSpeedFactorTurbo;
         }
-        else if (joystick.getRawButton(5)){
-            m_driveTrain.drive(Constants.DriveConstants.kLeftSpeedFactor * -1 * joystick.getRawAxis(1), 
-        Constants.DriveConstants.kLeftSpeedFactor * joystick.getRawAxis(5));
+        
+        if (joystick.getRightBumperPressed()){
+            rightSpeedFactor = leftSpeedFactor;
         }
-        else{
-        m_driveTrain.drive(Constants.DriveConstants.kLeftSpeedFactor * -1 * joystick.getRawAxis(1), 
-        Constants.DriveConstants.kRightSpeedFactor * joystick.getRawAxis(5));
-        }
+        
+        m_driveTrain.drive(leftSpeedFactor * joystick.getRawAxis(1), 
+            rightSpeedFactor * joystick.getRawAxis(5));
     }
 
     // Called once the command ends or is interrupted.

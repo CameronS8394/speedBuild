@@ -62,7 +62,7 @@ public class AutonomousCommand extends CommandBase {
     @Override
     public void execute() {
         if (timer.get() < Constants.DriveConstants.kAutonomousDriveSeconds) {
-            m_driveTrain.drive(Constants.DriveConstants.kAutonomousLeftDriveSpeed * -1,
+            m_driveTrain.drive(Constants.DriveConstants.kAutonomousLeftDriveSpeed,
                     Constants.DriveConstants.kAutonomousRightDriveSpeed);
         } else {            
             m_driveTrain.drive(0.0, 0.0);
