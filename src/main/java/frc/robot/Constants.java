@@ -26,12 +26,12 @@ public class Constants {
         public static final int kRightMotorBackPort = 3;
 
         public static final double kAutonomousLeftDriveSpeed = .8;
-        public static final double kAutonomousRightDriveSpeed = .6;
+        public static final double kAutonomousRightDriveSpeed = .68;
         public static final double kAutonomousDriveSeconds = 3;
 
-        public static final double kLeftSpeedFactor = .6;
+        public static final double kLeftSpeedFactor = .645;
         public static final double kRightSpeedFactor = .6;
 
-      
+      //left drives at 93.023256% the speed of the right
     }
 }
