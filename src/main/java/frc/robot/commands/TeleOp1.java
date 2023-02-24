@@ -62,9 +62,10 @@ public class TeleOp1 extends CommandBase {
     public void execute() {
         double leftSpeedFactor = Constants.DriveConstants.kLeftSpeedFactor;
         double rightSpeedFactor = Constants.DriveConstants.kRightSpeedFactor;
+        //sprintButton.whileTrue();
         
-        m_driveTrain.drive(leftSpeedFactor * driveController.getRawAxis(1), 
-            rightSpeedFactor * driveController.getRawAxis(5));
+        //sprintButton.whileFalse(m_driveTrain.drive(leftSpeedFactor * driveController.getRawAxis(1), rightSpeedFactor * driveController.getRawAxis(5)));
+        m_driveTrain.drive(leftSpeedFactor * driveController.getRawAxis(1), rightSpeedFactor * driveController.getRawAxis(5));
     }
 
     // Called once the command ends or is interrupted.
