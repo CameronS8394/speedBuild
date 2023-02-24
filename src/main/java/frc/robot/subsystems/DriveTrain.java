@@ -95,4 +95,7 @@ public class DriveTrain extends SubsystemBase {
         robotDrive.tankDrive(left, right);
     }
 
+    public void sprint(double left, double right){
+        robotDrive.tankDrive(left * Constants.DriveConstants.kSprintLeftSpeedFactor, right * Constants.DriveConstants.kSprintRightSpeedFactor);
+    }
 }
