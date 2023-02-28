@@ -62,10 +62,10 @@ public class TeleOp1 extends CommandBase {
     public void execute() {
         double leftSpeedFactor = Constants.DriveConstants.kLeftSpeedFactor;
         double rightSpeedFactor = Constants.DriveConstants.kRightSpeedFactor;
-        while(sprintButton.getAsBoolean() == true){
+        if(sprintButton.getAsBoolean() == true){
             m_driveTrain.sprint(leftSpeedFactor * driveController.getRawAxis(1), rightSpeedFactor * driveController.getRawAxis(5));
-        }
-        while(sprintButton.getAsBoolean() == false){
+        } 
+        if(sprintButton.getAsBoolean() == false){
             m_driveTrain.drive(leftSpeedFactor * driveController.getRawAxis(1), rightSpeedFactor * driveController.getRawAxis(5));
         }
     }
