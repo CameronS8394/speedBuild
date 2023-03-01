@@ -152,4 +152,8 @@ public class DriveMethods extends SubsystemBase {
             return;
         }
     }
+
+    public void driveStop() {
+        robotDrive.tankDrive(0,0);
+    }
 }
