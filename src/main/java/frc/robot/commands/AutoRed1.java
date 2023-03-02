@@ -64,8 +64,13 @@ public class AutoRed1 extends CommandBase {
     // Called every time the scheduler runs while the command is scheduled.
     @Override
     public void execute() {
-        m_DriveMethods.driveForward(5);
+        m_DriveMethods.driveForward(2);
         m_DriveMethods.driveTurnL(3);
+        m_DriveMethods.pause(3);
+        m_DriveMethods.driveBackwards(3);
+        m_DriveMethods.driveTurnL(4);
+        m_DriveMethods.driveTurn180();
+        m_DriveMethods.driveStop();
     }
 
     // Called once the command ends or is interrupted.
