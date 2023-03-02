@@ -124,7 +124,7 @@ public class DriveMethods extends SubsystemBase {
         m_driveTrain.drive(0,0);
     }
 
-    public void pause(int time) {
+    public void drivePause(int time) {
         Timer timer = new Timer();
         timer.reset();
         timer.start();
