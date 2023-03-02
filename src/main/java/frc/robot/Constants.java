@@ -28,11 +28,11 @@ public class Constants {
         public static final double kAutonomousLeftDriveSpeed = .645;
         public static final double kAutonomousRightDriveSpeed = .6;
 
-        public static final double kLeftSpeedFactor = .645;
-        public static final double kRightSpeedFactor = .6;
+        public static final double kLeftSpeedFactor = .71;
+        public static final double kRightSpeedFactor = .66;
 
-        public static final double kSprintLeftSpeedFactor = 1.5;
-        public static final double kSprintRightSpeedFactor = 1.5;
+        public static final double kSprintLeftSpeedFactor = 1.4;
+        public static final double kSprintRightSpeedFactor = 1.4;
 
       //left drives at 93.023256% the speed of the right
     }
