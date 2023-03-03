@@ -61,63 +61,63 @@ public class DriveMethods extends SubsystemBase {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
     
-    public void driveForward(int time) {
+    public void driveForward(double time) {
         Timer timer = new Timer();
         timer.reset();
         timer.start();
-        if (timer.get() < time) {
-            m_driveTrain.drive(Constants.DriveConstants.kAutonomousLeftDriveSpeed, Constants.DriveConstants.kAutonomousRightDriveSpeed);
-        } else {            
+        while (timer.get() < time) {
+            m_driveTrain.drive(-Constants.DriveConstants.kAutonomousLeftDriveSpeed, -Constants.DriveConstants.kAutonomousRightDriveSpeed);
+        }           
             m_driveTrain.drive(0,0);
             return;
-        }
+        
     }
 
     public void driveBackwards(int time) {
         Timer timer = new Timer();
         timer.reset();
         timer.start();
-        if (timer.get() < time) {
-            m_driveTrain.drive(-Constants.DriveConstants.kAutonomousLeftDriveSpeed, -Constants.DriveConstants.kAutonomousRightDriveSpeed);
-        } else {            
+        while (timer.get() < time) {
+            m_driveTrain.drive(Constants.DriveConstants.kAutonomousLeftDriveSpeed, Constants.DriveConstants.kAutonomousRightDriveSpeed);
+        }           
             m_driveTrain.drive(0,0);
             return;
-        }
+        
     }
     public void driveTurnL(int time) {
         Timer timer = new Timer();
         timer.reset();
         timer.start();
-        if (timer.get() < time) {
-            m_driveTrain.drive(-Constants.DriveConstants.kAutonomousLeftDriveSpeed, Constants.DriveConstants.kAutonomousRightDriveSpeed);
-        } else {            
+        while (timer.get() < time) {
+            m_driveTrain.drive(Constants.DriveConstants.kAutonomousLeftDriveSpeed, -Constants.DriveConstants.kAutonomousRightDriveSpeed);
+        }           
             m_driveTrain.drive(0,0);
             return;
-        }
+        
     }
 
     public void driveTurnR(int time) {
         Timer timer = new Timer();
         timer.reset();
         timer.start();
-        if (timer.get() < time) {
-            m_driveTrain.drive(Constants.DriveConstants.kAutonomousLeftDriveSpeed, -Constants.DriveConstants.kAutonomousRightDriveSpeed);
-        } else {            
+        while (timer.get() < time) {
+            m_driveTrain.drive(-Constants.DriveConstants.kAutonomousLeftDriveSpeed, Constants.DriveConstants.kAutonomousRightDriveSpeed);
+        }           
             m_driveTrain.drive(0,0);
             return;
-        }
+        
     }
 
     public void driveTurn180() {
         Timer timer = new Timer();
         timer.reset();
         timer.start();
-        if (timer.get() < 5) {
+        while (timer.get() < 5) {
             m_driveTrain.drive(-Constants.DriveConstants.kAutonomousLeftDriveSpeed, Constants.DriveConstants.kAutonomousRightDriveSpeed);
-        } else {            
+        }           
             m_driveTrain.drive(0,0);
             return;
-        }
+        
     }
 
     public void driveStop() {
@@ -128,10 +128,10 @@ public class DriveMethods extends SubsystemBase {
         Timer timer = new Timer();
         timer.reset();
         timer.start();
-        if (timer.get() < time) {
+        while (timer.get() < time) {
             m_driveTrain.drive(0,0);
-        } else {            
+        }    
             return;
-        }
+    
     }
 }
