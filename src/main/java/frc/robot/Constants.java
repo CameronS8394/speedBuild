@@ -25,10 +25,10 @@ public class Constants {
         public static final int kRightMotorFrontPort = 0;
         public static final int kRightMotorBackPort = 3;
 
-        public static final double kAutonomousLeftDriveSpeed = .645;
+        public static final double kAutonomousLeftDriveSpeed = .64;
         public static final double kAutonomousRightDriveSpeed = .6;
 
-        public static final double kLeftSpeedFactor = .71;
+        public static final double kLeftSpeedFactor = .705;
         public static final double kRightSpeedFactor = .66;
 
         public static final double kSprintLeftSpeedFactor = 1.4;
