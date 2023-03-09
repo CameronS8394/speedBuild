@@ -67,7 +67,7 @@ public class AutoRed1 extends CommandBase {
     @Override
     public void execute() {
         while (num < 1){
-            m_DriveMethods.driveForward(0          );
+            m_DriveMethods.driveForward(0);
             //m_DriveMethods.driveTurnL(3);
             //m_DriveMethods.drivePause(3);
             //m_DriveMethods.driveBackwards(1);
