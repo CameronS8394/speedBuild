@@ -69,7 +69,7 @@ public class DriveMethods extends SubsystemBase {
             m_driveTrain.drive(-Constants.DriveConstants.kAutonomousLeftDriveSpeed, -Constants.DriveConstants.kAutonomousRightDriveSpeed);
         }           
             m_driveTrain.drive(0,0);
-            return;
+        return;
         
     }
 
@@ -81,7 +81,7 @@ public class DriveMethods extends SubsystemBase {
             m_driveTrain.drive(Constants.DriveConstants.kAutonomousLeftDriveSpeed, Constants.DriveConstants.kAutonomousRightDriveSpeed);
         }           
             m_driveTrain.drive(0,0);
-            return;
+        return;
         
     }
     public void driveTurnL(int time) {
@@ -92,7 +92,7 @@ public class DriveMethods extends SubsystemBase {
             m_driveTrain.drive(Constants.DriveConstants.kAutonomousLeftDriveSpeed, -Constants.DriveConstants.kAutonomousRightDriveSpeed);
         }           
             m_driveTrain.drive(0,0);
-            return;
+        return;
         
     }
 
@@ -104,7 +104,7 @@ public class DriveMethods extends SubsystemBase {
             m_driveTrain.drive(-Constants.DriveConstants.kAutonomousLeftDriveSpeed, Constants.DriveConstants.kAutonomousRightDriveSpeed);
         }           
             m_driveTrain.drive(0,0);
-            return;
+        return;
         
     }
 
@@ -116,7 +116,7 @@ public class DriveMethods extends SubsystemBase {
             m_driveTrain.drive(-Constants.DriveConstants.kAutonomousLeftDriveSpeed, Constants.DriveConstants.kAutonomousRightDriveSpeed);
         }           
             m_driveTrain.drive(0,0);
-            return;
+        return;
         
     }
 
@@ -131,7 +131,24 @@ public class DriveMethods extends SubsystemBase {
         while (timer.get() < time) {
             m_driveTrain.drive(0,0);
         }    
-            return;
+        return;
+    
+    }
+
+    public void intakeRelease(int time) {
+        Timer timer = new Timer();
+        timer.reset();
+        timer.start();
+        while (timer.get() < time) {
+            //put code
+        }    
+        return;
+    
+    }
+
+    public void autoBalence() {
+        
+         return;
     
     }
 }
