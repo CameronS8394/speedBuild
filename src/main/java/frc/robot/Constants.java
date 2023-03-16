@@ -34,6 +34,8 @@ public class Constants {
         public static final double kSprintLeftSpeedFactor = 1.45;
         public static final double kSprintRightSpeedFactor = 1.45;
 
+        public static final double kOffBalence = 5;
+
       //left drives at 93.023256% the speed of the right
     }
 }
