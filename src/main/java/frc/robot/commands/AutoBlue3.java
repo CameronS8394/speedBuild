@@ -67,7 +67,7 @@ public class AutoBlue3 extends CommandBase {
     @Override
     public void execute() {
         while (num < 1){
-            m_DriveMethods.intakeRelease(1);
+            //m_DriveMethods.intakeRelease(1);
             m_DriveMethods.driveBackwards(2);
             m_DriveMethods.autoBalence();
             num ++;

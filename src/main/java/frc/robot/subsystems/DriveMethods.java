@@ -150,7 +150,7 @@ public class DriveMethods extends SubsystemBase {
     }
 
     public void autoBalence() {
-            while (Math.abs(m_Balence.getTilt()) <= Constants.DriveConstants.kOffBalence){
+            while (Math.abs(m_Balence.getTilt()) >= Constants.DriveConstants.kOffBalence){
                 if (m_Balence.getTilt() > 0){
                     driveForward(.2);
                 }
@@ -158,12 +158,12 @@ public class DriveMethods extends SubsystemBase {
                     driveBackwards(.2);
                 }
             }
-         return;
+            return;
     
     }
 
     public void advancedBalence() {
-        while (Math.abs(m_Balence.getTilt()) <= Constants.DriveConstants.kOffBalence){
+        while (Math.abs(m_Balence.getTilt()) >= Constants.DriveConstants.kOffBalence){
             if (m_Balence.getTilt() > 0){
                 driveForward(0.2 * (Math.abs(m_Balence.getTilt()) / Constants.DriveConstants.kOffBalence));
             }
@@ -171,7 +171,7 @@ public class DriveMethods extends SubsystemBase {
                 driveBackwards(0.2 * (Math.abs(m_Balence.getTilt()) / Constants.DriveConstants.kOffBalence));
             }
         }
-     return;
+        return;
 
     }
 }
