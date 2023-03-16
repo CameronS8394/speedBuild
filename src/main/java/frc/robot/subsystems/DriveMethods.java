@@ -161,4 +161,17 @@ public class DriveMethods extends SubsystemBase {
          return;
     
     }
+
+    public void advancedBalence() {
+        while (Math.abs(m_Balence.getTilt()) <= Constants.DriveConstants.kOffBalence){
+            if (m_Balence.getTilt() > 0){
+                driveForward(0.2 * (Math.abs(m_Balence.getTilt()) / Constants.DriveConstants.kOffBalence));
+            }
+            if (m_Balence.getTilt() < 0){
+                driveBackwards(0.2 * (Math.abs(m_Balence.getTilt()) / Constants.DriveConstants.kOffBalence));
+            }
+        }
+     return;
+
+    }
 }
