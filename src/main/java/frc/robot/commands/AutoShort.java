@@ -67,8 +67,7 @@ public class AutoShort extends CommandBase {
     @Override
     public void execute() {
         while (num < 1){
-            m_DriveMethods.intakeRelease(1);
-            m_DriveMethods.driveBackwards(3);
+            m_DriveMethods.driveForward(2);
             num ++;
         }
         m_DriveMethods.driveStop();
