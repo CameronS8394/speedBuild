@@ -31,8 +31,8 @@ public class Constants {
         public static final double kLeftSpeedFactor = .68;
         public static final double kRightSpeedFactor = .65;
 
-        public static final double kSprintLeftSpeedFactor = 1.4;
-        public static final double kSprintRightSpeedFactor = 1.4;
+        public static final double kSprintLeftSpeedFactor = 1.45;
+        public static final double kSprintRightSpeedFactor = 1.45;
 
         public static final double kOffBalence = 5;
 
