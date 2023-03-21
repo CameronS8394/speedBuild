@@ -67,7 +67,7 @@ public class AutoBasic extends CommandBase {
     @Override
     public void execute() {
         while (num < 1){
-            m_DriveMethods.driveForward(3);
+            m_DriveMethods.driveForward(2);
             num ++;
         }
         m_DriveMethods.driveStop();
